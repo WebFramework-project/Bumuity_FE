@@ -1,0 +1,30 @@
+.chat-list-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.chat-list-item-name {
+  font-weight: bold;
+}
+
+.chat-list-item-preview {
+  color: grey;
+}
+
+.chat-list-item-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-unread-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.chat-time {
+  color: grey;
+}

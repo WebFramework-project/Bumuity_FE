@@ -1,0 +1,25 @@
+.chat-component {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.user-profile {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
