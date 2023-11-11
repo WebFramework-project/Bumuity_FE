@@ -32,7 +32,8 @@ function UserPic() {
         border: "1px solid #322275",
         background: "#0A0A14",
         borderRadius: "50%",
-
+        backgroundSize: 'contain',
+        backgroundPosition:'center'
         
     };
 
