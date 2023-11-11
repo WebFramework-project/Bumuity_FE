@@ -1,7 +1,6 @@
-import UserInput from "../components/register/UserInput";
-import Cheking from "../components/register/Checking"
+import UserInfo from '../components/userProfile/UserInfo'
 
-function Login(){
+function UserProfile(){
 
     const backgroundContainerStyle={
         display:"flex",
@@ -24,12 +23,13 @@ function Login(){
         marginBottom:"2.19rem"
     }
 
+        
     return(
         <div style={backgroundContainerStyle}>
             <div style={titleStyle}>BUMUITY</div>
-            <div><UserInput /></div>
-            <div><Cheking/></div>
+            <div><UserInfo /></div>
         </div>
     );
 }
-export default Login;
+
+export default UserProfile;

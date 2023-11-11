@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
+import UserPic from './UserPic';
 
 const Container = styled.div`
     display: flex;
@@ -19,7 +20,7 @@ const Button = styled.button`
     background: #4D0EFF;
     color: white;
     cursor: pointer;
-    margin-top: 1.5rem;
+
 `;
 
 const Input = styled.input`
@@ -65,13 +66,6 @@ function UserInput() {
                 onBlur={() => setClickedInput(null)}
             />
             <Input
-                type="password"
-                placeholder="비밀번호"
-                clicked={clickedInput === 'password'}
-                onClick={() => setClickedInput('password')}
-                onBlur={() => setClickedInput(null)}
-            />
-            <Input
                 type="text"
                 placeholder="회사명"
                 clicked={clickedInput === 'company'}
@@ -85,8 +79,9 @@ function UserInput() {
                 onClick={() => setClickedInput('position')}
                 onBlur={() => setClickedInput(null)}
             />
-            <Link to="/Login">
-                <Button>계정 생성하기</Button>
+            <UserPic/>
+            <Link to="">
+                <Button>프로필 설정하기</Button>
             </Link>
         </Container>
     );

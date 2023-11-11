@@ -1,5 +1,5 @@
-import UserInput from "../components/register/UserInput";
-import Cheking from "../components/register/Checking"
+import LoginInput from '../components/login/LoginInput'
+import Checking from '../components/login/Checking';
 
 function Login(){
 
@@ -10,7 +10,7 @@ function Login(){
         height:"100vh",
         flexDirection:"column",
         alignItems:"center",
-
+        
     }
 
     const titleStyle={
@@ -27,8 +27,8 @@ function Login(){
     return(
         <div style={backgroundContainerStyle}>
             <div style={titleStyle}>BUMUITY</div>
-            <div><UserInput /></div>
-            <div><Cheking/></div>
+            <div><LoginInput /></div>
+            <div><Checking/></div>
         </div>
     );
 }

@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.5rem;
 `;
 
 const Button = styled.button`
@@ -32,8 +32,8 @@ const Input = styled.input`
     padding-left: 0.2rem;
     border-radius: 0.625rem;
     border: 4px solid #342479;
+    marginBottom: 1.5rem;
     padding-left:0.3rem;
-
 
     background-color: ${(props) => (props.clicked ? 'white' : '#0A0A14;')};
     color: ${(props) => (props.clicked ? '#342479' : 'white')};
@@ -52,13 +52,6 @@ function UserInput() {
         <Container>
             <Input
                 type="text"
-                placeholder="이름"
-                clicked={clickedInput === 'name'}
-                onClick={() => setClickedInput('name')}
-                onBlur={() => setClickedInput(null)}
-            />
-            <Input
-                type="text"
                 placeholder="이메일"
                 clicked={clickedInput === 'email'}
                 onClick={() => setClickedInput('email')}
@@ -71,22 +64,8 @@ function UserInput() {
                 onClick={() => setClickedInput('password')}
                 onBlur={() => setClickedInput(null)}
             />
-            <Input
-                type="text"
-                placeholder="회사명"
-                clicked={clickedInput === 'company'}
-                onClick={() => setClickedInput('company')}
-                onBlur={() => setClickedInput(null)}
-            />
-            <Input
-                type="text"
-                placeholder="직책"
-                clicked={clickedInput === 'position'}
-                onClick={() => setClickedInput('position')}
-                onBlur={() => setClickedInput(null)}
-            />
-            <Link to="/Login">
-                <Button>계정 생성하기</Button>
+            <Link to="/Profile">
+                <Button>로그인</Button>
             </Link>
         </Container>
     );
