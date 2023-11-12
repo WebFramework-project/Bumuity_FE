@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import ScrollToBottom from "react-scroll-to-bottom";
 import "../styles/ChatRoom.css";
 
 const ChatRoom = ({ roomId, currentUser }) => {
@@ -38,6 +39,15 @@ const ChatRoom = ({ roomId, currentUser }) => {
   ]);
 
   const [newMessage, setNewMessage] = useState("");
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   const sendMessage = () => {
     if (newMessage.trim()) {
@@ -61,7 +71,7 @@ const ChatRoom = ({ roomId, currentUser }) => {
 
   return (
     <div className="chat-room">
-      <div className="messages-container">
+      <ScrollToBottom className="messages-container">
         {sortedMessages.map((message) => (
           <div
             key={message.id}
@@ -88,7 +98,8 @@ const ChatRoom = ({ roomId, currentUser }) => {
             </div>
           </div>
         ))}
-      </div>
+        <div ref={messagesEndRef}></div>
+      </ScrollToBottom>
       <div className="message-input-container">
         <input
           type="text"
