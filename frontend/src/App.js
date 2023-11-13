@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Register from './pages/RegisterPage';
 import Login from './pages/LoginPage';
 import Profile from './pages/UserProfile';
+
+import Chat from './pages/ChatMain';
 //react 사용
 //react-router-dom 사용
 
@@ -14,6 +16,8 @@ function App() {
         <Route path="register" element={<Register/>}/>
         <Route path="login" element={<Login/>}/>
         <Route path="Profile" element={<Profile/>}/>
+
+        <Route path="chat" element={<Chat/>}/>
         </Routes>
     </BrowserRouter>)
 }
