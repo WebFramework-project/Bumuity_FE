@@ -29,6 +29,7 @@ function Memo() {
         overflowY: "scroll",
         backgroundColor: "lightgray",
         fontSize: "20px", 
+
       };
       
     return (

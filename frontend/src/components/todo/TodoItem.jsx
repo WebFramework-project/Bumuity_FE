@@ -1,4 +1,4 @@
-
+import TodoList from "./TodoList";
 
 function TodoItem() {
 
@@ -12,6 +12,7 @@ function TodoItem() {
 
     return (
     <div style={backgroundStyle}>
+      <div><TodoList/></div>
     </div>
   
     );

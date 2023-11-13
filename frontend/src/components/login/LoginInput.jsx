@@ -65,7 +65,7 @@ function UserInput() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <Link to="/Profile">
+            <Link to="/Chat">
                 <Button disabled={isButtonDisabled}>로그인</Button>
             </Link>
         </Container>

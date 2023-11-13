@@ -1,6 +1,6 @@
 // Container.js
-import Memo from '../memo/Memo'
-import Todo from '../todo/TodoMain'
+import Memo from '../memo/Memo';
+import Todo from '../todo/TodoMain';
 
 function Container() {
   const containerStyle = {
@@ -10,10 +10,8 @@ function Container() {
     backgroundColor: "#1B1923",
     flexDirection: "column",
     gap: "0.69rem",
-
-
-  }
-
+    overflow: "hidden"
+  };
 
   return (
     <div style={containerStyle}>

@@ -6,7 +6,8 @@ function TodoMain() {
       width: "95%",
       height: "48vh", 
       marginTop:"13px",
-      marginLeft:"10px"
+      marginLeft:"10px",
+      overflow: "hidden"
     }
   
 
@@ -27,6 +28,7 @@ function TodoMain() {
       <div style={backgroundStyle}>
         <div style ={todoStyle}>TO DO LIST</div>
         <div><TodoItem/></div>
+        
       </div>
 
     );
