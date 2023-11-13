@@ -16,9 +16,9 @@ const Button = styled.button`
     border-radius: 0.2rem;
     border: 1px solid #4D0EFF;
     padding-left: 0.2rem;
-    background: #4D0EFF;
+    background: ${({ disabled }) => (disabled ? '#A0A0A0' : '#4D0EFF')};
     color: white;
-    cursor: pointer;
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
     margin-top: 1.5rem;
 `;
 
@@ -35,7 +35,7 @@ const Input = styled.input`
     marginBottom: 1.5rem;
     padding-left:0.3rem;
 
-    background-color: ${(props) => (props.clicked ? 'white' : '#0A0A14;')};
+    background-color: ${(props) => (props.clicked ? 'white' : '#0A0A14')};
     color: ${(props) => (props.clicked ? '#342479' : 'white')};
 
     &:focus {
@@ -46,26 +46,27 @@ const Input = styled.input`
 `;
 
 function UserInput() {
-    const [clickedInput, setClickedInput] = useState(null);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const isButtonDisabled = !email || !password;
 
     return (
         <Container>
             <Input
                 type="text"
                 placeholder="이메일"
-                clicked={clickedInput === 'email'}
-                onClick={() => setClickedInput('email')}
-                onBlur={() => setClickedInput(null)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
             <Input
                 type="password"
                 placeholder="비밀번호"
-                clicked={clickedInput === 'password'}
-                onClick={() => setClickedInput('password')}
-                onBlur={() => setClickedInput(null)}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <Link to="/Profile">
-                <Button>로그인</Button>
+                <Button disabled={isButtonDisabled}>로그인</Button>
             </Link>
         </Container>
     );

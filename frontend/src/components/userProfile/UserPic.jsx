@@ -19,22 +19,20 @@ function UserPic() {
         marginTop: "0.5rem",
         display: "flex",
         justifyContent: "center",
-        marginBottom:"0.5rem"
+        marginBottom: "0.5rem",
+        alignItems: "center",
     };
 
     const profilesetStyle = {
         backgroundImage: `url(${selectedProfileImage})`,
-        backgroundSize: "contain",
-        backgroundPosition: "50% 50%",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         width: "10.5rem",
         height: "9.75rem",
         flexShrink: "0",
         border: "1px solid #322275",
         background: "#0A0A14",
         borderRadius: "50%",
-        backgroundSize: 'contain',
-        backgroundPosition:'center'
-        
     };
 
     const iconStyle = {

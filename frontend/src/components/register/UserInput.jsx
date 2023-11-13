@@ -16,9 +16,9 @@ const Button = styled.button`
     border-radius: 0.2rem;
     border: 1px solid #4D0EFF;
     padding-left: 0.2rem;
-    background: #4D0EFF;
+    background: ${({ disabled }) => (disabled ? '#A0A0A0' : '#4D0EFF')};
     color: white;
-    cursor: pointer;
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
     margin-top: 1.5rem;
 `;
 
@@ -32,11 +32,10 @@ const Input = styled.input`
     padding-left: 0.2rem;
     border-radius: 0.625rem;
     border: 4px solid #342479;
-    padding-left:0.3rem;
+    padding-left: 0.3rem;
 
-
-    background-color: ${(props) => (props.clicked ? 'white' : '#0A0A14;')};
-    color: ${(props) => (props.clicked ? '#342479' : 'white')};
+    background-color: #0A0A14;
+    color: white;
 
     &:focus {
         outline: none;
@@ -46,47 +45,48 @@ const Input = styled.input`
 `;
 
 function UserInput() {
-    const [clickedInput, setClickedInput] = useState(null);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [company, setCompany] = useState('');
+    const [position, setPosition] = useState('');
+
+    const isButtonDisabled = !name || !email || !password || !company || !position;
 
     return (
         <Container>
             <Input
                 type="text"
                 placeholder="이름"
-                clicked={clickedInput === 'name'}
-                onClick={() => setClickedInput('name')}
-                onBlur={() => setClickedInput(null)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
             />
             <Input
                 type="text"
                 placeholder="이메일"
-                clicked={clickedInput === 'email'}
-                onClick={() => setClickedInput('email')}
-                onBlur={() => setClickedInput(null)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
             <Input
                 type="password"
                 placeholder="비밀번호"
-                clicked={clickedInput === 'password'}
-                onClick={() => setClickedInput('password')}
-                onBlur={() => setClickedInput(null)}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <Input
                 type="text"
                 placeholder="회사명"
-                clicked={clickedInput === 'company'}
-                onClick={() => setClickedInput('company')}
-                onBlur={() => setClickedInput(null)}
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
             />
             <Input
                 type="text"
                 placeholder="직책"
-                clicked={clickedInput === 'position'}
-                onClick={() => setClickedInput('position')}
-                onBlur={() => setClickedInput(null)}
+                value={position}
+                onChange={(e) => setPosition(e.target.value)}
             />
             <Link to="/Login">
-                <Button>계정 생성하기</Button>
+                <Button disabled={isButtonDisabled}>계정 생성하기</Button>
             </Link>
         </Container>
     );
