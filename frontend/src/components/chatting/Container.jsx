@@ -11,12 +11,14 @@ function Container() {
     flexDirection: "column",
     gap: "0.69rem",
 
+
   }
+
 
   return (
     <div style={containerStyle}>
       <div><Todo /></div>
-      <div style={{ flex: 1 }}><Memo /></div>
+      <div><Memo /></div>
     </div>
   );
 }

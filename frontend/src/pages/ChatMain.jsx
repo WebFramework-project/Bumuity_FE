@@ -5,7 +5,9 @@ function ChatMain(){
         backgroundColor:"#0A0A14",
         display:"flex",
         width:"100vw",
-        height:"100vh"
+        height:"100vh",
+        justifyContent:"flex-end"
+        
     }
     return(
         <div style={backgroundStyle}>
