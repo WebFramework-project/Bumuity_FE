@@ -5,7 +5,7 @@ function TodoList() {
     const backgroundStyle = {
         backgroundColor: "white",
         width: "92%",
-        height: "40vh", 
+        height: "20vh", 
         marginTop:"12px",
         marginLeft:"15px"
       }
