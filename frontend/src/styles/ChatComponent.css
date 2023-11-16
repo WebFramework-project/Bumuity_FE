@@ -1,6 +1,7 @@
 .chat-component {
   display: flex;
   height: 100vh;
+  gap:10px;
 }
 
 .sidebar {
@@ -23,4 +24,14 @@
   flex-grow: 1;
   overflow-y: auto;
   height: 100%;
+}
+
+.user-name,
+.user-title {
+  color: #FFF;
+font-family: Roboto;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal; /* 혹은 원하는 텍스트 색상으로 변경 */
 }

@@ -112,6 +112,7 @@ const ChatRoom = ({ roomId, currentUser }) => {
       </ScrollToBottom>
       <div className="message-input-container">
         <Input
+          id="chattingInput"
           placeholder="메시지를 입력하세요"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}

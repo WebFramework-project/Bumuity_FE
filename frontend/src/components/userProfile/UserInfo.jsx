@@ -88,7 +88,7 @@ function UserInput() {
                 onChange={(e) => handleInputChange('position', e.target.value)}
             />
             <UserPic />
-            <Link to="">
+            <Link to="/chat">
                 <Button disabled={isButtonDisabled}>프로필 설정하기</Button>
             </Link>
         </Container>
