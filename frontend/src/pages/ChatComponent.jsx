@@ -1,7 +1,7 @@
 import React from "react";
-import ChatList from "./ChatList";
-import ChatRoom from "./ChatRoom";
-import UserProfile from "./UserProfile";
+import ChatList from "../components/chatting/ChatList";
+import ChatRoom from "../components/chatting/ChatRoom";
+import UserProfile from "../components/chatting/UserProfile";
 import "../styles/ChatComponent.css";
 
 class ChatComponent extends React.Component {

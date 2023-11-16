@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MessageBox, Input, Button } from "react-chat-elements";
 import ScrollToBottom from "react-scroll-to-bottom";
-import "../styles/ChatRoom.css";
+import "../../styles/ChatRoom.css";
 
 const ChatRoom = ({ roomId, currentUser }) => {
   const [messages, setMessages] = useState([

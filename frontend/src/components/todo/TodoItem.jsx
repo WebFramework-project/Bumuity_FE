@@ -12,7 +12,7 @@ function TodoItem() {
 
     return (
     <div style={backgroundStyle}>
-      <div><TodoList/></div>
+      {/* <div><TodoList/></div> */}
     </div>
   
     );
