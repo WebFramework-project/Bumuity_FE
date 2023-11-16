@@ -14,10 +14,13 @@ function ChatMain(){
     const containerStyle={
         marginRight:"0px"
     }
+    const chatStyle={
+        width:"100%"
+    }
     return(
         <div style={backgroundStyle}>
             
-            <div><ChatComponent/></div>
+            <div style={chatStyle}><ChatComponent/></div>
             <div style={containerStyle}><Container/></div>
         </div>
     );
