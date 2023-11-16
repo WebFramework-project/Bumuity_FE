@@ -1,4 +1,5 @@
-import TodoItem from './TodoItem';
+import TodoList from "./TodoList";
+import TodoItem from "./TodoList";
 
 function TodoMain() {
     const backgroundStyle = {
@@ -10,7 +11,6 @@ function TodoMain() {
       overflow: "hidden"
     }
   
-
     const todoStyle = {
         fontSize: "18px", 
         fontFamily: "Arial, sans-serif",
@@ -23,11 +23,23 @@ function TodoMain() {
         color: "lightgray",
       };
 
+    const todobackgroundStyle = {
+        backgroundColor: "lightgray",
+        width: "95%",
+        height: "40vh", 
+        marginTop:"13px",
+        marginLeft:"10px",
+        overflow: "hidden"
+
+    }
+
 
     return (
       <div style={backgroundStyle}>
         <div style ={todoStyle}>TO DO LIST</div>
-        <div><TodoItem/></div>
+        <div style ={todobackgroundStyle}></div>
+        <div>< TodoList/></div>
+    
         
       </div>
 

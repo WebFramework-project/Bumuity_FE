@@ -15,7 +15,7 @@ function Container() {
 
   return (
     <div style={containerStyle}>
-      {/* <div><Todo /></div> */}
+      <div><Todo /></div>
       <div><Memo /></div>
     </div>
   );

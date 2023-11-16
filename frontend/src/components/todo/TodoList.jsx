@@ -1,20 +1,22 @@
 
-
 function TodoList() {
 
-    const backgroundStyle = {
-        backgroundColor: "white",
-        width: "92%",
-        height: "20vh", 
-        marginTop:"12px",
-        marginLeft:"15px"
-      }
+  const backgroundStyle = {
+    backgroundColor: "#3B374E",
+    width: "90%",
+    height: "20vh", 
+    marginTop:"13px",
+    marginLeft:"10px",
+    overflow: "hidden"
+  }
 
-      return (
-        <div style={backgroundStyle}>
-          <div><TodoList/></div>
-        </div>
-      
-        );
+  return (
+    <div style={backgroundStyle}>
+
+      </div>
+  );
 }
+
 export default TodoList;
+
+
