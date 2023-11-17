@@ -75,3 +75,11 @@
   line-height: normal;
 
 }
+
+#add{
+  width:30px;
+  height:30px;
+  border-radius: 3px;
+  margin-right:10px;
+  margin-left:5px;
+}

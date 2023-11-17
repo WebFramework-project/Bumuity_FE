@@ -3,6 +3,7 @@ import { MessageBox, Input } from "react-chat-elements";
 import ScrollToBottom from "react-scroll-to-bottom";
 import "../../styles/ChatRoom.css";
 import sendImg from '../../images/start/Send.png'
+import add from '../../images/start/add.PNG'
 
 const ChatRoom = ({ roomId, currentUser }) => {
   const [messages, setMessages] = useState([
@@ -214,9 +215,12 @@ const ChatRoom = ({ roomId, currentUser }) => {
             }
           }}
           rightButtons={
+            <>
           <div id="send" onClick={sendMessage} style={{ cursor: 'pointer' }}>
             <img src={sendImg} alt="Send" id="sendImg"/>
           </div>
+          <img id="add" src={add}/>
+          </>
           }
         />
       </div>
