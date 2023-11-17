@@ -11,16 +11,18 @@ import Chat from './pages/ChatMain';
 //react-router-dom 사용
 
 function App() {
-    return(<BrowserRouter>
+    return (
+    <BrowserRouter>
         <Routes>
-        <Route path="start" element={<Start/>}/>
-        <Route path="register" element={<Register/>}/>
-        <Route path="login" element={<Login/>}/>
-        <Route path="Profile" element={<Profile/>}/>
+        <Route path="" element={<Start />} index />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
 
-        <Route path="chat" element={<Chat/>}/>
+        <Route path="/chat" element={<Chat />} />
         </Routes>
-    </BrowserRouter>)
+    </BrowserRouter>
+    );
 }
 
 export default App;

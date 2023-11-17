@@ -17,12 +17,12 @@
   flex-grow: 1;
 }
 
-/* Switch - the box around the slider */
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px; /* Width of the switch */
-  height: 34px; /* Height of the switch */
+  width: 60px;
+  height: 34px;
 }
 
 /* Slider */
@@ -45,8 +45,8 @@
 .switch .slider:before {
   position: absolute;
   content: "";
-  height: 26px; /* Height of the slider */
-  width: 26px; /* Width of the slider */
+  height: 26px; 
+  width: 26px; 
   left: 4px;
   bottom: 4px;
   background-color: white;

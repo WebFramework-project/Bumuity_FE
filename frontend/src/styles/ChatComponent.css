@@ -18,6 +18,12 @@
 .user-profile {
   flex-shrink: 0;
   margin-top: auto;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .main {
@@ -26,12 +32,3 @@
   height: 100%;
 }
 
-.user-name,
-.user-title {
-  color: #FFF;
-font-family: Roboto;
-font-size: 1rem;
-font-style: normal;
-font-weight: 500;
-line-height: normal; /* 혹은 원하는 텍스트 색상으로 변경 */
-}
