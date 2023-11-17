@@ -4,7 +4,7 @@ import { ChatItem } from "react-chat-elements";
 import "react-chat-elements/dist/main.css";
 import "../../styles/ChatList.css";
 
-const ChatList = ({ onSelectRoom }) => {
+const ChatList = ({ onSelectRoom, selectedRoomId }) => {
   const rooms = [
     {
       id: 1,
@@ -45,6 +45,7 @@ const ChatList = ({ onSelectRoom }) => {
       {rooms.map((room) => (
         <ChatItem
           key={room.id}
+          className={room.id === selectedRoomId ? "selected" : ""}
           avatar={room.img}
           alt={room.name}
           title={room.name}

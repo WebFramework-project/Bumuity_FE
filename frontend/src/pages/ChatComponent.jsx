@@ -28,7 +28,7 @@ class ChatComponent extends React.Component {
     return (
       <div className="chat-component">
         <div className="sidebar">
-          <ChatList onSelectRoom={this.handleSelectRoom} />
+        <ChatList onSelectRoom={this.handleSelectRoom} selectedRoomId={selectedRoomId} />
           <UserProfile
             profileImage={profileImage}
             name={userName}
