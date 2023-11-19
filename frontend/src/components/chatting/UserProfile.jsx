@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/UserProfile.css";
+import { Link } from "react-router-dom";
 
 class UserProfile extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class UserProfile extends React.Component {
 
     return (
       <div className="user-profile">
-        <img src={profileImage} alt="User" className="user-image" />
+        <Link to="/profile"><img src={profileImage} alt="User" className="user-image" /></Link>
         <div className="user-details">
           <div className="user-name">{name}</div>
           {showTitle && <div className="user-title">{title}</div>}

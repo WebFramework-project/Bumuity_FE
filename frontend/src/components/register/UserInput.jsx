@@ -75,7 +75,7 @@ function UserInput() {
             />
             <Input
                 type="text"
-                placeholder="회사명"
+                placeholder="소속"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
             />

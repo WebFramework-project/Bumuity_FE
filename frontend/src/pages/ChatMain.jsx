@@ -7,17 +7,21 @@ function ChatMain(){
         display:"flex",
         width:"100%",
         height:"100vh",
-        justifyContent:"space-between"
+        justifyContent:"space-between",
+        gap:"10px"
         
     }
 
     const containerStyle={
         marginRight:"0px"
     }
+    const chatStyle={
+        width:"100%"
+    }
     return(
         <div style={backgroundStyle}>
             
-            <div><ChatComponent/></div>
+            <div style={chatStyle}><ChatComponent/></div>
             <div style={containerStyle}><Container/></div>
         </div>
     );

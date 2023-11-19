@@ -2,7 +2,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  
 }
 
 .chat-list-item-name {
@@ -28,3 +28,49 @@
 .chat-time {
   color: grey;
 }
+
+.chat-list{
+  background:#1B1923;
+}
+
+.rce-citem{
+  background-color:#3B374E;
+  margin-top:10px;
+  color:white;
+  font-family: Roboto;
+}
+
+.rce-citem:hover{
+  background-color:#9A85FB;
+  transition: background-color 0.3s;
+}
+
+.selected .rce-citem {
+  background-color: #9A85FB !important;
+}
+
+.rce-citem-body--top-title{
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.rce-citem-body--bottom-title{
+  color:white;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.rce-citem-body--top-time{
+  color:white;
+  margin-left:5px;
+}
+
+.rce-citem-avatar{
+  padding-left: 5px;
+  padding-right:5px;
+}
+
