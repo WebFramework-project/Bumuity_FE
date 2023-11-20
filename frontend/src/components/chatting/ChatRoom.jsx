@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { MessageBox, Input } from "react-chat-elements";
 import ScrollToBottom from "react-scroll-to-bottom";
 import "../../styles/ChatRoom.css";
-import sendImg from '../../images/start/Send.png'
-import add from '../../images/start/add.PNG'
+import sendImg from '../../images/start/Send.png';
+import add from '../../images/start/add.PNG';
+import FileUploadModal from './FileUploadModal'; // 모달 컴포넌트를 가져옵니다
 
 const ChatRoom = ({ roomId, currentUser }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       profileImg:"data:image/png;base64,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",
@@ -216,14 +218,18 @@ const ChatRoom = ({ roomId, currentUser }) => {
           }}
           rightButtons={
             <>
-          <div id="send" onClick={sendMessage} style={{ cursor: 'pointer' }}>
-            <img src={sendImg} alt="Send" id="sendImg"/>
-          </div>
-          <img id="add" src={add}/>
-          </>
+              <div id="send" onClick={sendMessage} style={{ cursor: 'pointer' }}>
+                <img src={sendImg} alt="Send" id="sendImg"/>
+              </div>
+              <img id="add" src={add} onClick={() => setIsModalOpen(true)} />
+            </>
           }
         />
       </div>
+      <FileUploadModal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };

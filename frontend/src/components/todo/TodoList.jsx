@@ -12,7 +12,6 @@ function TodoList() {
 
   return (
     <div style={backgroundStyle}>
-
       </div>
   );
 }
