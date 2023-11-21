@@ -63,11 +63,11 @@ function TodoMain() {
         border: "5px solid #fff",
         padding: "10px",
         marginLeft: "10px",
-        marginRight: "10px",
+        marginRight: "20px",
         borderRadius: "8px",
         color: "lightgray",
         backgroundColor: "#3B374E",
-        width: "93%",
+        width: "8%",
       }}>
         TO DO LIST
       </div>
@@ -115,6 +115,7 @@ function TodoMain() {
         justifyContent: "flex-start",
         alignItems: "left",
         borderRadius: "10px",
+        width: "92%",
       }}>
 
 
