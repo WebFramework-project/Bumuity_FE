@@ -92,4 +92,46 @@ function UserInput() {
     );
 }
 
+function Login() {
+    const [email, setEmail] = useState(localStorage.getItem('email') || '');
+    const [password, setPassword] = useState('');
+
+    const isButtonDisabled = !email || !password;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // ...로그인 로직...
+        const registeredEmail = localStorage.getItem('email');
+        const registeredPassword = localStorage.getItem('password');
+
+        if (email === registeredEmail && password === registeredPassword) {
+            alert('로그인 성공!');
+            // 여기서 로그인 성공 후의 로직을 작성하면 됩니다.
+            // 예: 로그인 상태를 관리하는 상태를 업데이트하거나, 로그인 후의 페이지로 리다이렉트 등
+        } else {
+            alert('이메일 또는 비밀번호가 잘못되었습니다.');
+        }
+    };
+
+    return (
+        <Container onSubmit={handleSubmit}>
+            <Input
+                type="text"
+                placeholder="이메일"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
+                type="password"
+                placeholder="비밀번호"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <Link to="/Chat">
+                <Button disabled={isButtonDisabled}>로그인</Button>
+            </Link>
+        </Container>
+    );
+}
+
 export default UserInput;
