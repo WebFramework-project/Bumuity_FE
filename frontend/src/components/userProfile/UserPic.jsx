@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import iconImage from '../../images/start/profilesetIcon.png';
 
@@ -25,7 +26,7 @@ function UserPic() {
 
     const profilesetStyle = {
         backgroundImage: `url(${selectedProfileImage})`,
-        backgroundSize: "cover",
+        backgroundSize: "10.5rem 9.75rem",
         backgroundPosition: "center",
         width: "10.5rem",
         height: "9.75rem",

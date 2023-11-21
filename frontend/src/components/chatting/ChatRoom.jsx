@@ -185,22 +185,54 @@ const ChatRoom = ({ roomId, currentUser }) => {
 
   const handleFileUpload = (file) => {
     const reader = new FileReader();
-    reader.onloadend = () => {
-      const base64String = reader.result;
-      const newMessageObj = {
-        id: messages.length + 1,
-        chatRoomId: roomId,
-        name: currentUser.name,
-        title: currentUser.title,
-        text: base64String,
-        type: "photo",
-        time: new Date(),
-        user: true,
+    reader.onload = (event) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas'); //canvas API 사용
+        const ctx = canvas.getContext('2d');
+  
+        const maxWidth = 380; //이미지 최대 크기 조절
+        const maxHeight = 180;
+  
+        let width = img.width;
+        let height = img.height;
+  
+        if (width > height) {
+          if (width > maxWidth) {
+            height *= maxWidth / width;
+            width = maxWidth;
+          }
+        } else {
+          if (height > maxHeight) {
+            width *= maxHeight / height;
+            height = maxHeight;
+          }
+        }
+  
+        canvas.width = width;
+        canvas.height = height;
+  
+        ctx.drawImage(img, 0, 0, width, height);
+  
+        const base64String = canvas.toDataURL('image/jpeg'); // 이미지를 JPEG 형식의 base64 문자열로 변환
+  
+        const newMessageObj = {
+          id: messages.length + 1,
+          chatRoomId: roomId,
+          name: currentUser.name,
+          title: currentUser.title,
+          text: base64String, //변환된채로 text 속성에다가 저장함
+          type: "photo",
+          time: new Date(),
+          user: true,
+        };
+        setMessages([...messages, newMessageObj]);
       };
-      setMessages([...messages, newMessageObj]);
+      img.src = event.target.result;
     };
     reader.readAsDataURL(file);
   };
+  
 
   return (
     <div className="chat-room">
