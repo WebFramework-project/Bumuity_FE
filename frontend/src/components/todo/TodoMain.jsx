@@ -67,7 +67,7 @@ function TodoMain() {
         borderRadius: "8px",
         color: "lightgray",
         backgroundColor: "#3B374E",
-        width: "92%",
+        width: "9%",
       }}>
         TO DO LIST
       </div>
