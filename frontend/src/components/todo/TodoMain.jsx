@@ -1,3 +1,7 @@
+
+  
+
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -76,7 +80,7 @@ function TodoMain() {
         borderRadius: "8px",
         color: "lightgray",
         backgroundColor: "#3B374E",
-        width: "9%",
+        width: "92%",
       }}>
         TO DO LIST
       </div>
@@ -112,7 +116,7 @@ function TodoMain() {
       <div style={{
         backgroundColor: "lightgrey",
         width: "100%",
-        height: "37vh",
+        height: "30vh",
         marginLeft: "10px",
         marginRight: "10px",
         overflow: "hidden",
