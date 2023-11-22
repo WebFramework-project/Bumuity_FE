@@ -1,7 +1,4 @@
 
-  
-
-
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -66,7 +63,6 @@ function TodoMain() {
   return (
     <div style={containStyle}>
     <div style={{ flexDirection: "column", alignItems: "center" }}>
-      {/* TO DO LIST Title */}
       <div style={{
         fontSize: "18px",
         fontFamily: "Arial, sans-serif",
@@ -85,7 +81,6 @@ function TodoMain() {
         TO DO LIST
       </div>
 
-      {/* Input and Add Button */}
       <div style={{
         flexDirection: "column",
         justifyContent: "center",
@@ -112,7 +107,6 @@ function TodoMain() {
         <button onClick={addTask}>+</button>
       </div>
 
-      {/* Todo List */}
       <div style={{
         backgroundColor: "lightgrey",
         width: "100%",

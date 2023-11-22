@@ -43,7 +43,7 @@ const LinkButtonStyle = styled(Link)`
 
     &:hover {
         color: #FFFFFF;
-        text-decoration: none; // Ensure no underline on hover
+        text-decoration: none;
     }
 `;
 

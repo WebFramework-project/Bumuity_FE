@@ -51,7 +51,7 @@ function UserPic({ onSelectImage, userImage }) {
     backgroundImage: selectedProfileImage
       ? `url(${selectedProfileImage})`
       : "none",
-    backgroundSize: "10.5rem 9.75rem", // '10.5rem 9.75rem' 등으로 설정하시면 됩니다.
+    backgroundSize: "10.5rem 9.75rem",
     backgroundPosition: "center",
     width: "10.5rem",
     height: "9.75rem",
