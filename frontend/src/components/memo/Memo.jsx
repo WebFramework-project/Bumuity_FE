@@ -26,10 +26,10 @@ function Memo() {
         width: "90%", 
         height: "40vh", 
         marginLeft: "15px",
-        overflowY: "scroll",
         backgroundColor: "lightgray",
         fontSize: "20px", 
-
+        borderRadius: "8px",
+        padding: "1px"
       };
       
     return (
