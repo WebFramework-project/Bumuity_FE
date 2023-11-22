@@ -21,7 +21,7 @@ function Memo() {
         borderRadius: "8px", 
         color: "lightgray",
       };
-
+      
     const textareaStyle = {
         width: "90%", 
         height: "40vh", 

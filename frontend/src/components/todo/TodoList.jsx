@@ -3,7 +3,7 @@ function TodoList() {
 
   const backgroundStyle = {
     backgroundColor: "#3B374E",
-    width: "10%",
+    width: "100%",
     height: "20vh", 
     marginTop:"13px",
     marginLeft:"10px",

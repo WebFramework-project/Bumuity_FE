@@ -62,12 +62,12 @@ function TodoMain() {
         textAlign: "center",
         border: "5px solid #fff",
         padding: "10px",
-        marginLeft: "10px",
+        marginLeft: "0px",
         marginRight: "20px",
         borderRadius: "8px",
         color: "lightgray",
         backgroundColor: "#3B374E",
-        width: "8%",
+        width: "92%",
       }}>
         TO DO LIST
       </div>
