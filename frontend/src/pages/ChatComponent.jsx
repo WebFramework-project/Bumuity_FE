@@ -2,15 +2,15 @@ import React from "react";
 import ChatList from "../components/chatting/ChatList";
 import ChatRoom from "../components/chatting/ChatRoom";
 import UserProfile from "../components/chatting/UserProfile";
-import SplitPane, { Pane } from 'split-pane-react';
-import 'split-pane-react/esm/themes/default.css';
+import SplitPane, { Pane } from "split-pane-react";
+import "split-pane-react/esm/themes/default.css";
 import "../styles/ChatComponent.css";
 
 class ChatComponent extends React.Component {
   state = {
     selectedRoomId: null,
     showTitle: true,
-    sizes: [150, '30%', 'auto'],
+    sizes: [150, "30%", "auto"],
   };
 
   handleSelectRoom = (roomId) => {
@@ -27,16 +27,23 @@ class ChatComponent extends React.Component {
 
   render() {
     const { selectedRoomId, showTitle } = this.state;
-    const profileImage =
-      "https://w1.pngwing.com/pngs/743/500/png-transparent-circle-silhouette-logo-user-user-profile-green-facial-expression-nose-cartoon-thumbnail.png";
-    const userName = "김한성";
-    const userTitle = "차장";
+    const storedUserInfo = JSON.parse(localStorage.getItem("userInfo")) || {};
+    const profileImage = storedUserInfo.imageUrl;
+    const userName = storedUserInfo.name;
+    const userTitle = storedUserInfo.position;
 
     return (
       <div className="chat-component">
-        <SplitPane split='vertical' sizes={this.state.sizes} onChange={this.setSizes}>
-          <Pane className="sidebar" minSize={55} maxSize='50%'>
-            <ChatList onSelectRoom={this.handleSelectRoom} selectedRoomId={selectedRoomId} />
+        <SplitPane
+          split="vertical"
+          sizes={this.state.sizes}
+          onChange={this.setSizes}
+        >
+          <Pane className="sidebar" minSize={55} maxSize="50%">
+            <ChatList
+              onSelectRoom={this.handleSelectRoom}
+              selectedRoomId={selectedRoomId}
+            />
             <UserProfile
               profileImage={profileImage}
               name={userName}
