@@ -51,6 +51,10 @@ function UserInput() {
 
     const isButtonDisabled = !email || !password;
 
+    const onSubmit = (data) => {
+        localStorage.setItem('userInfo', JSON.stringify(data));
+    }
+
     return (
         <Container>
             <Input

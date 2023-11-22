@@ -45,12 +45,13 @@ const Input = styled.input`
 `;
 
 function UserInput() {
+    const storedUserInfo = JSON.parse(localStorage.getItem('userInfo')) || {};
     const [inputValues, setInputValues] = useState({
-        name: '',
-        email: '',
-        company: '',
-        position: '',
-    });
+        name: storedUserInfo.name || '',
+        email: storedUserInfo.email || '',
+        company: storedUserInfo.company || '',
+        position: storedUserInfo.position || '',
+    })
 
     const handleInputChange = (field, value) => {
         setInputValues((prevValues) => ({
@@ -58,6 +59,7 @@ function UserInput() {
             [field]: value,
         }));
     };
+;
 
     const isButtonDisabled = Object.values(inputValues).some((value) => value === '');
 
