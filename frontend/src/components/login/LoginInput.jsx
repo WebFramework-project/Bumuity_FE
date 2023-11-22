@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -49,6 +49,18 @@ const Input = styled.input`
 function UserInput() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo") || "{}");
+
+    if (userInfo.email === email && userInfo.password === password) {
+      navigate("/Chat");
+    } else {
+      alert("이메일 또는 비밀번호가 일치하지 않습니다.");
+      setPassword("");
+    }
+  };
 
   const isButtonDisabled = !email || !password;
 
@@ -66,9 +78,9 @@ function UserInput() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <Link to="/Chat">
-        <Button disabled={isButtonDisabled}>로그인</Button>
-      </Link>
+      <Button onClick={handleLogin} disabled={isButtonDisabled}>
+        로그인
+      </Button>
     </Container>
   );
 }
