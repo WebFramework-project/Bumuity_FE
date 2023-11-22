@@ -51,7 +51,16 @@ function TodoMain() {
     }
   };
 
+  const containStyle={
+    backgroundColor: "rgb(59, 55, 78)",
+    width: "95%",
+    height: "48vh",
+    marginLeft: "10px",
+    marginTop:"3px"
+  }
+
   return (
+    <div style={containStyle}>
     <div style={{ flexDirection: "column", alignItems: "center" }}>
       {/* TO DO LIST Title */}
       <div style={{
@@ -80,11 +89,11 @@ function TodoMain() {
         backgroundColor: "lightgrey",
         marginBottom: "10px",
         marginLeft: "10px",
-        width: "100%",
+        marginRight:"10px",
         height: "5vh",
         paddingTop: "15px",
         paddingLeft: "6px",
-        paddingRight: "50px",
+        paddingRight: "5px",
         overflow: "hidden",
         borderRadius: "10px",
       }}>
@@ -93,7 +102,7 @@ function TodoMain() {
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           placeholder="Enter a new task"
-          style={{ width: "80%", marginLeft: "15px", fontSize: "15px" }}
+          style={{ width: "17rem", marginLeft: "15px", fontSize: "15px", marginRight: "5px" }}
           onKeyPress={handleKeyPress}
         />
         <button onClick={addTask}>+</button>
@@ -130,6 +139,7 @@ function TodoMain() {
           </TaskWrapper>
         ))}
       </div>
+    </div>
     </div>
   );
 }
